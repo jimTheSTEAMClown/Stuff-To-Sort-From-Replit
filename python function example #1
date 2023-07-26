@@ -1,0 +1,20 @@
+def myFunc(myVar1, myVar2, myPassedString):
+  print('hi the answer is = ', myVar1+myVar2)
+  myVar3 = myVar1 / myVar2
+  printStuff('stuff from inside function')
+  printStuff(myPassedString)
+  return myVar3
+
+def printStuff(funcString):
+  print(funcString)  
+
+def main():
+  print('hello')
+  x=7
+  y=2
+  myVar4 = myFunc(x,y,'string that i passes from main')
+  printStuff('stuff to print')
+  print(myVar4)
+  print('end')
+
+main()
