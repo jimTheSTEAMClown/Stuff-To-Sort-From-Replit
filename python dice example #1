@@ -1,0 +1,17 @@
+import random 
+min = 1 
+max = 6 
+user_input = input("Roll again? Y or N ")
+
+
+
+while user_input == "Y" : 
+  dice_one = random.randint(min, max)
+  dice_two = random.randint(min, max)
+  dice_three = random.randint(min, max)
+  dice_four = random.randint(min, max)
+  dice_five = random.randint(min, max)
+  dice_six = random.randint(min, max)
+  print(dice_one + dice_two + dice_three + dice_four + dice_five + dice_six)
+  print("The dice value is: ")
+  user_input = input("Roll again? Y or N ")
