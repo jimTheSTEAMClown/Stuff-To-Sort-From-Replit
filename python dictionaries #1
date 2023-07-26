@@ -1,0 +1,70 @@
+#Py-Dictionary-Lab#2-Zelda-Item-Keys-STEAMClown
+print('Py-Dictionary-Lab#2-Create-Keys-STEAMClown\n ---------------------------------\n')
+# - Read the zeldaItems file and create a Dictionary.  Use the found on line starting with a "@" and before a ":".
+#words in the file to create a list of "keys".  The values dont matter right now.
+print('Using the zeldaItems file open() function, open \nthe file words.txt and create a dictionary \nusing the words from the file as the "keys".  \nYou can just assign empty value pairs.\n')
+# -------------------------------------
+#Make Your Edits below
+# -------------------------------------
+# create an empty dictionary named "zeldaItems"
+
+# open file here:
+
+# read in a line and create a list
+# hint - just look for lines that start with "@"
+# hint - you will want to split on ":" and then get the word or words before it to make the item word... for example you have "@ Letter : some description" where you want to get the word "Letter" added as a "key" to your dictionary.  You also have "@ Monster Bait : some description" where you want to add "MosterBait" to your dictionary... so you will need to do some string manipulation and work to get the items into your dictionary...
+
+# Create a dictionary of keys using the words from your list
+  
+zeldaItems = dict()
+print(zeldaItems)
+fhand = open("zelda.txt")
+print(fhand)
+count = 0
+for line in fhand:
+  if '@' in line:
+    #print(line)
+    mySplitLine = line.split(':')
+    mySplitLine2 = mySplitLine[0].split(' ')
+    #print(mySplitLine2)
+    if len(mySplitLine2) < 4:
+      print(mySplitLine2[1])
+      zeldaItems[mySplitLine2[1]] = 0
+    else:
+      print(mySplitLine2[1]+mySplitLine2[2])
+      zeldaItems[mySplitLine2[1]+mySplitLine2[2]] = 0 
+      
+# now read thsi string and update the values of these keys:value pairs
+cheatCodeString = 'Letter:0 MonsterBait:2 BlueCandle:5 RedCandle:2 Stepladder:1 MagicBook:1 Pickles:2'      
+
+cheatCodesItems = cheatCodeString.split()
+print(cheatCodesItems)
+for x in cheatCodesItems:
+  print(x)
+  item = x.split(":")
+  zeldaItems[item[0]]=item[1]
+
+# -------------------------------------
+# Don't Edit the code below this point
+# -------------------------------------
+# - This is a function to just pause the program so you can see each section work
+def anyKey() :
+  hitAnyKey = input('Enter any key to continue > ')
+  print('\n----------------------------')
+
+anyKey()
+
+print(zeldaItems)
+print('\n----------------------------')
+anyKey()
+
+if 'SilverArrows' in zeldaItems:
+  print('The item "SilverArrows" is found in the dictionary')
+if 'Pickles' in zeldaItems:
+  print('the item "Pickles" is found in the dictionary')
+else:
+  print('There are no "Pickles"')
+
+
+
+print('Done')
