@@ -1,0 +1,32 @@
+import random
+
+keepPlaying = 0
+allRollsTotal = 0
+while keepPlaying < 100 :
+  
+
+  throw = input('Click any key to roll ') 
+  # if input is q or Q then break
+  
+  print('You Typed', throw)
+  # get a random number
+  dice1 = random.randint(1,6)
+  print("dice 1 = ",dice1)
+  dice2 = random.randint(1,6)
+  print("dice 2 = ",dice2)
+  # print dice Total
+  diceTotal = dice1 + dice2
+  print('Dice Total for this roll', diceTotal)
+  allRollsTotal = allRollsTotal + diceTotal
+  print('Cumulative Dice Total', allRollsTotal)
+    # check if they are both the same
+  if dice1 == dice2:
+    #means you have doubles
+    print('doubles')
+    if dice1 == 1:
+      #then you know they are doubles and they are =1, because if dice1 is 1 and they ar equal, then dice2 is also 1
+      print('Snake Eyes')
+
+
+  keepPlaying = allRollsTotal
+print('Bye')  
