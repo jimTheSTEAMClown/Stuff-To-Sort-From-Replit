@@ -1,0 +1,16 @@
+vt=9
+
+#r2 = float(input('R2\n'))
+#v2 = float(input('V2\n'))
+r2 = 560
+v2 = 2.5
+v1 = vt-v2
+it = v2/r2
+r1 = v1/it
+print('Vt = %s.' % vt)
+print('R2 = %s.' % r2)
+print('V2 = %s.' % v2)
+print('It = %s.' % it)
+
+print('R1 = %s.' % r1)
+print('V1 = %s.' % v1)
