@@ -1,0 +1,19 @@
+import requests
+#first parameter of the 'get' method is the 'url':
+x = requests.get('https://www.google.com/search?q=weather+san+jose')
+# x = requests.get('https://www.steamclown.org/projects/red_pill.txt')
+#print the response text (the content of the requested file):
+whole_file=x.text
+print(whole_file)
+print("--------------------------")
+#index=whole_file.find("San Jose")
+index=whole_file.find("°F")
+print(index)
+print(whole_file[index-600:index])
+print("--------------------------")
+print(whole_file[index:index+300])
+temp = (whole_file[index-2:index])
+print(whole_file[index-3:index])
+
+print('the current temp in','San Jose','is',temp)
+
