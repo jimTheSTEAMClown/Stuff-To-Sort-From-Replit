@@ -1,0 +1,8 @@
+robot_name = input('give me a robot name with out spaces: ')
+print(robot_name)
+if ' ' in robot_name:
+  print('you have spaces... I\'ll fix that')
+  robot_name = robot_name.replace(" ", "_")
+  print(robot_name)
+  robot_name = robot_name.lower()
+  print(robot_name)
